@@ -1,7 +1,7 @@
-import ReactDOM from 'react-dom/client'
+import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import './index.css'
-// import bootstrap not sure how to generate the dist folder that holds the extension. It generates with npm run build
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../src/styles/style.css';
 
 import App from './app'
 import Error from './components/pages/Error';
@@ -13,7 +13,7 @@ import AboutMe from './components/pages/AboutMe';
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <App />
+        element: <App />,
         errorElement: <Error />,
         children: [
             {

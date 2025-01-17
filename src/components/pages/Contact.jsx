@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import './style.css';
+//import './style.css';
 import { validateEmail } from '../../utils/helpers';
 
-export default function Contact() {
+function Contact() {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -19,19 +19,14 @@ export default function Contact() {
     // Based on the input type, we set the state of either email, username, and password
     // TODO: Add an else statement to the end that will set the password to the value of 'inputValue'
 
-    if (inputType === 'email') {
+    if (inputType === 'name') {
+        setName(inputValue);
+      } else if (inputType === 'email') {
         setEmail(inputValue);
-      } else if (inputType === 'userName') {
-        setUserName(inputValue);
       } else {
-        setPassword(inputValue);
+        setMessage(inputValue);
       }
     };
-
-    // Ternary statement that will call either setFirstName or setLastName based on what field the user is typing in
-    // I dont think the ";" betweem email and message is correct
-    return info === 'Name' ? setName(value) : setEmail(value) ; setMessage(value);
-  
 
   const handleFormSubmit = (e) => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
@@ -89,3 +84,5 @@ export default function Contact() {
     </div>
   );
 }
+
+export default Contact;
