@@ -2,8 +2,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/styles/style.css';
-
-import App from './app'
+import App from './app';
 import Error from './components/pages/Error';
 import Contact from './components/pages/Contact';
 import Portfolio from './components/pages/Portfolio';

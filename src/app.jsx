@@ -1,12 +1,12 @@
 import Header from "./components/Header";
-import PortfolioContainer from "./components/PortfolioContainer";
 import Footer from "./components/Footer";
+import { Outlet } from "react-router-dom";
 
 function App() {
     return (
        <>
-        <Header /> 
-        < PortfolioContainer /> 
+        < Header /> 
+        < Outlet />
         < Footer />
        </>
     );
