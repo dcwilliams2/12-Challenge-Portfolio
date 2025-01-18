@@ -1,85 +1,88 @@
 import { useState } from 'react';
-//import './style.css';
 import { validateEmail } from '../../utils/helpers';
 
 function Contact() {
-
+  // State variables
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
+  // Handle input changes
   const handleInputChange = (e) => {
-    // Getting the value and name of the input which triggered the change
-    const { target } = e;
-    const inputType = target.name;
-    const inputValue = target.value;
+    const { name, value } = e.target;
 
-   //*** this need to be chaged to reflect the form for the contact page */
-    // Based on the input type, we set the state of either email, username, and password
-    // TODO: Add an else statement to the end that will set the password to the value of 'inputValue'
+    if (name === 'name') {
+      setName(value);
+    } else if (name === 'email') {
+      setEmail(value);
+    } else if (name === 'message') {
+      setMessage(value);
+    }
+  };
 
-    if (inputType === 'name') {
-        setName(inputValue);
-      } else if (inputType === 'email') {
-        setEmail(inputValue);
-      } else {
-        setMessage(inputValue);
-      }
-    };
-
+  // Handle form submission
   const handleFormSubmit = (e) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
 
+    // Validate email
     if (!validateEmail(email)) {
-        setErrorMessage('Email is invalid');
-        return;
+      setErrorMessage('Email is invalid');
+      return;
     }
 
-    // Alert the user their first and last name, clear the inputs
+    // Validate required fields
+    if (!name || !message) {
+      setErrorMessage('Please fill out all fields');
+      return;
+    }
+
+    // Clear the form
     setName('');
     setEmail('');
     setMessage('');
-    alert(`Thank you for your submission ${Name}!`);
+    setErrorMessage('');
+    alert(`Thank you for your submission, ${name}!`);
   };
 
   return (
     <div className="container text-center">
-      <h1>
-        Contact {firstName} {lastName}
-      </h1>
+      <h1>Contact</h1>
       <form className="form" onSubmit={handleFormSubmit}>
         <h2>Name:</h2>
         <input
-          value={Name}
-          name="Name"
+          value={name}
+          name="name"
           onChange={handleInputChange}
           type="text"
-          placeholder="Name"
+          placeholder="Your Name"
+          className='form-control'
         />
         <h2>Email:</h2>
         <input
-          value={Email}
-          name="Email"
+          value={email}
+          name="email"
           onChange={handleInputChange}
-          type="text"
-          placeholder="Email"
+          type="email"
+          placeholder="Your Email"
+          className='form-control'
         />
         <h2>Message:</h2>
-         <input
-          value={Message}
-          name="Message"
+        <textarea
+          value={message}
+          name="message"
           onChange={handleInputChange}
-          type="text"
-          placeholder="Message"
+          placeholder="Your Message"
+          rows="5"
+          className='form-control'
         />
-        <button type="submit">
-          Submit
-        </button>
+        <button type="submit" className='btn btn-primary w-100 mt-3'>Submit</button>
       </form>
+      {/* Display error message if any */}
       {errorMessage && (
-        <div><p className='error-text'>{errorMessage}</p></div>
+        <div>
+          <p className="error-text" style={{ color: 'red' }}>{errorMessage}</p>
+        </div>
       )}
     </div>
   );
