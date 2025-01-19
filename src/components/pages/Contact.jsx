@@ -1,14 +1,13 @@
 import { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
+import '../../styles/Contact.css';
 
 function Contact() {
-  // State variables
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
-  // Handle input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 
@@ -21,23 +20,18 @@ function Contact() {
     }
   };
 
-  // Handle form submission
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    // Validate email
     if (!validateEmail(email)) {
       setErrorMessage('Email is invalid');
       return;
     }
-
-    // Validate required fields
     if (!name || !message) {
       setErrorMessage('Please fill out all fields');
       return;
     }
 
-    // Clear the form
     setName('');
     setEmail('');
     setMessage('');
@@ -46,8 +40,8 @@ function Contact() {
   };
 
   return (
-    <div className="container text-center">
-      <h1>Contact</h1>
+    <div id="contactForm" className="container text-center">
+      <h1 class='underlined-text'>Contact</h1>
       <form className="form" onSubmit={handleFormSubmit}>
         <h2>Name:</h2>
         <input
@@ -76,9 +70,8 @@ function Contact() {
           rows="5"
           className='form-control'
         />
-        <button type="submit" className='btn btn-primary w-100 mt-3'>Submit</button>
+        <button id="contactForm-button" type="submit" className='btn btn-primary w-100 mt-3'>Submit</button>
       </form>
-      {/* Display error message if any */}
       {errorMessage && (
         <div>
           <p className="error-text" style={{ color: 'red' }}>{errorMessage}</p>

@@ -1,13 +1,11 @@
 footer {
-  margin-top: 30px;
   padding: 20px 0;
-  background: linear-gradient(135deg, var(--color1), var(--color2));
-  color: var(--light);
+  color: var(--color2);
   text-align: center;
 }
 
 footer a {
-  color: var(--light);
+  color: var(--color2);
   text-decoration: none;
   margin: 0 10px;
 }

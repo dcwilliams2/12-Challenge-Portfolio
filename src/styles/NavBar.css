@@ -1,5 +1,5 @@
 .navbar .nav-link {
-    color: var(--light);
+    color: var(--color1);
     text-decoration: none;
     margin: 0 15px;
     font-size: 1.5rem;
@@ -9,12 +9,24 @@
   
 .navbar .nav-link:hover {
     transform: scale(1.5);
+    background-color: transparent;
+    text-shadow: 40px 20px 55px 0px rgba(0,0,0,1);
+    font-weight: bolder;
   }
 
 .navbar .nav-link.active {
-    background-color: var(--color1);
+    background-color: var(--smoke);
+    color: var(--color1);
     border: 2px solid var(--color1); 
     border-radius: 8px; 
-    padding: 5px 10px; 
+    padding: 5px 10px;
+    box-shadow: 30px 20px 55px -8px rgba(0,0,0,1);
+}
 
+.navbar {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-family: Copperplate, Papyrus, fantasy;
 }

@@ -1,7 +1,7 @@
 function Resume() {
     return (
-        <div>
-            <h1>Resume</h1>
+        <div class="m-5 p-5">
+            <h1 class='underlined-text'>Resume</h1>
             <p>This is a placeholder for the Resume page content.</p>
         </div>
     );

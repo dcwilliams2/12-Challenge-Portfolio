@@ -1,0 +1,18 @@
+#contactForm {
+    background-color: var(--smoke);
+    color: var(--color1);
+    margin-top: 3%;
+    margin-left: 3%;
+    max-width: 33%;
+}
+
+#contactForm-button {
+    background-color: var(--color1);
+    border-color: var(--color1);
+}
+
+#contactForm-button:hover {
+    background-color: var(--smoke);
+    color: var(--color1);
+    border: 2px solid var(--color1);
+}
