@@ -1,9 +1,22 @@
+footer {
+  margin-top: 30px;
+  padding: 20px 0;
+  background: linear-gradient(135deg, var(--color1), var(--color2));
+  color: var(--light);
+  text-align: center;
+}
+
+footer a {
+  color: var(--light);
+  text-decoration: none;
+  margin: 0 10px;
+}
   .footer-icon {
     transition: transform 0.3s ease, color 0.3s ease;
   }
   
   .footer-icon:hover {
-    color: #007bff; /* Change icon color on hover */
-    transform: scale(1.2); /* Slightly enlarge the icon */
+    color: var(--color1); 
+    transform: scale(1.2); 
   }
   

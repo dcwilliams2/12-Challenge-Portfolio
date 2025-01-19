@@ -3,17 +3,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import "../styles/Footer.css";
+import "../styles/Style.css";
+
 const Footer = () => {
   return (
-    <footer className="bg-dark text-light py-3 text-center">
-      <div className="container">
+    <footer>
         <div className="d-flex justify-content-center">
            <a
             href="https://github.com/dcwilliams2"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-light mx-3"
-            style={{ fontSize: "24px" }}
+            style={{ fontSize: "40px" }}
           >
             <FontAwesomeIcon icon={faGithub} className="footer-icon" />
           </a>
@@ -21,8 +21,7 @@ const Footer = () => {
             href="https://www.linkedin.com/in/daniel-williams-b0a11597/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-light mx-3"
-            style={{ fontSize: "24px" }}
+            style={{ fontSize: "40px" }}
           >
             <FontAwesomeIcon icon={faLinkedin} className="footer-icon" />
           </a>
@@ -30,14 +29,12 @@ const Footer = () => {
             href="https://www.instagram.com/dwilliams02"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-light mx-3"
-            style={{ fontSize: "24px" }}
+            style={{ fontSize: "40px" }}
           >
             <FontAwesomeIcon icon={faInstagram} className="footer-icon" />
           </a>
         </div>
-        <p className="mt-3">© {new Date().getFullYear()} All Rights Reserved.</p>
-      </div>
+        <p>© {new Date().getFullYear()} All Rights Reserved.</p>
     </footer>
   );
 };

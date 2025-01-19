@@ -3,13 +3,10 @@ import Navigation from './Navigation';
 
 function Header() {
     return (
-        <div>
-        <header className='Header'>
+        <header>
             <h1>Daniel Williams</h1>
-            <main className='mx-3'></main>
+            <Navigation/>
         </header>
-        <Navigation/>
-        </div>
     );
 }
 

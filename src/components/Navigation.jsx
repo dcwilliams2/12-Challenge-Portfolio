@@ -1,10 +1,11 @@
 import { Link, useLocation } from 'react-router-dom';
+import "../styles/NavBar.css"
 
 function Navigation() {
     const currentPage = useLocation().pathname;
 
     return (
-        <ul className="nav nav-tabs">
+        <ul className="nav navbar">
             <li className="nav-item">
                 <Link
                     to="/"

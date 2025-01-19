@@ -1,0 +1,20 @@
+.navbar .nav-link {
+    color: var(--light);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+.navbar .nav-link:hover {
+    transform: scale(1.5);
+  }
+
+.navbar .nav-link.active {
+    background-color: var(--color1);
+    border: 2px solid var(--color1); 
+    border-radius: 8px; 
+    padding: 5px 10px; 
+
+}
