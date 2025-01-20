@@ -1,13 +1,17 @@
 import React from 'react';
+//, title, link1, link2
+//<a href={link1} className="card-link">Card link</a>
+//                link1="#"
+   //             link2="#"
+//<a href={link2} className="card-link">Another link</a>
 
-function Card ({ image, alt, title, link1, link2 }) {
+
+function Card ({ image, alt, title }) {
     return (
         <div className="card" style={{ width: '18rem' }}>
         <img src={image} class="card-img" alt={alt}></img>
             <div className="card-img-overlay">
                 <h5 className="card-title">{title}</h5>
-                <a href={link1} className="card-link">Card link</a>
-                <a href={link2} className="card-link">Another link</a>
             </div>
         </div>
     );
@@ -17,18 +21,14 @@ function Projects() {
     return (
         <div>
             <Card
-                image=" "
-                alt=" "
-                title="Card Title 1"
-                link1="#"
-                link2="#"
+                image="../assets/app-blog.png"
+                alt="blog"
+                title="My First Blog"
             />
             <Card
-                image=" "
-                alt=" "
-                title="Card Title 2"
-                link1="#"
-                link2="#"
+                image="../assets/app-css.png"
+                alt="CSS"
+                title="CSS Cheat Sheet"
             />
         </div>
     );
