@@ -1,37 +1,34 @@
 import React from 'react';
-//, title, link1, link2
-//<a href={link1} className="card-link">Card link</a>
-//                link1="#"
-   //             link2="#"
-//<a href={link2} className="card-link">Another link</a>
 
+function Card({ title, imageUrl, links }) {
+  const cardStyle = {
+    backgroundImage: `url(${imageUrl})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    width: '18rem',
+    height: '18rem',
+    color: 'white',
+    border: '1px solid #ccc',
+    borderRadius: '8px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-end',
+    padding: '1rem',
+  };
 
-function Card ({ image, alt, title }) {
-    return (
-        <div className="card" style={{ width: '18rem' }}>
-        <img src={image} class="card-img" alt={alt}></img>
-            <div className="card-img-overlay">
-                <h5 className="card-title">{title}</h5>
-            </div>
-        </div>
-    );
+  return (
+    <div className="card m-5" style={cardStyle}>
+      <div className="card-body">
+        <h5 className="card-title">{title}</h5>
+        {links.map((link, index) => (
+          <a key={index} href={link.url} className="card-link">{link.text}</a>
+        ))}
+      </div>
+    </div>
+  );
 }
 
-function Projects() {
-    return (
-        <div>
-            <Card
-                image="../assets/app-blog.png"
-                alt="blog"
-                title="My First Blog"
-            />
-            <Card
-                image="../assets/app-css.png"
-                alt="CSS"
-                title="CSS Cheat Sheet"
-            />
-        </div>
-    );
-}
+export default Card;
 
-export default Projects;
+  

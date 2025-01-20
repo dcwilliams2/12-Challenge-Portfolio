@@ -22,6 +22,8 @@
   .card:hover .card-link {
     opacity: 1;
     color: var(--dark);
+    background-color: var(--smoke);
+    
   }
 
   .card .card-title {
@@ -31,6 +33,7 @@
   .card:hover .card-title {
     opacity: 1;
     color: var(--dark);
+    background-color: var(--smoke);
   }
 
   h5.card-title {
