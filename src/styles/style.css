@@ -10,7 +10,7 @@ h1 {
   font-family: Copperplate, Papyrus, fantasy;
 }
 
-h2 {
+h2, a {
   color: var(--color1);
   font-family: Copperplate, Papyrus, fantasy;
   text-align: left;

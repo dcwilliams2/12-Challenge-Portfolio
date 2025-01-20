@@ -65,7 +65,6 @@ function Portfolio() {
   return (
     <div className="m-5">
       <h1 className="underlined-text">Portfolio</h1>
-      <p>This is a placeholder for the Portfolio page content.</p>
 
       <div className="row d-flex justify-content-center">
         {cardData.map((card, index) => (
