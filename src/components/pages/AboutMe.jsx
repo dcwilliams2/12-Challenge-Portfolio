@@ -2,7 +2,7 @@ function AboutMe() {
     return (
       <div class="m-5">
         <div class="row">
-          <div class="col pt-5">
+          <div class="col p-5">
             <h1 class='underlined-text'>About Me</h1>
               <p>This is a placeholder for the About Me page content.</p>
           </div>

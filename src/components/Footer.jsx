@@ -7,7 +7,7 @@ import "../styles/Style.css";
 
 const Footer = () => {
   return (
-    <footer class="fixed-bottom">
+    <footer>
         <div className="d-flex justify-content-center">
            <a
             href="https://github.com/dcwilliams2"
