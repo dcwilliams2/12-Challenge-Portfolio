@@ -1,0 +1,34 @@
+#resumeLink {
+    background-color: var(--smoke);
+    color: var(--color1);
+    border: 3px solid var(--color1); 
+    border-radius: 8px; 
+    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 1.5rem;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 1);
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--color2);
+}
+
+ul.resume {
+    list-style-type: square;
+}
+
+h3 {
+    font-family: Copperplate, Papyrus, fantasy;
+    font-size: 2.5rem;
+    color: var(--color1);
+}
+
+li {
+    color: var(--color2);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+li:hover {
+    color: var(--color1);
+}

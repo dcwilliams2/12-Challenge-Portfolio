@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import "../styles/Footer.css";
-import "../styles/Style.css";
+
 
 const Footer = () => {
   return (

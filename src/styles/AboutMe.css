@@ -1,0 +1,11 @@
+.picture {
+    border: 5px solid var(--color1);
+    border-radius: 8px;
+    width: 40%;
+    box-shadow: 10px 10px 20px var(--color1);
+  }
+
+  .aboutMe {
+    color: var(--color1);
+    font-size: 1.6rem;
+  }
