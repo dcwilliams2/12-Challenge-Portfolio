@@ -1,4 +1,5 @@
 import '../../styles/AboutMe.css';
+import image from '../../assets/headshot.jpg';
 
 function AboutMe() {
     return (
@@ -8,7 +9,7 @@ function AboutMe() {
             <h1 class='underlined-text'>About Me</h1>
           </div>
           <div class="col-4">
-          <img src="../src/assets/headshot.jpg" class="img-thumbnail picture" alt="Head Shot"></img>
+          <img src={image} class="img-thumbnail picture" alt="Head Shot"></img>
           </div>
         </div>
         <div class="row">
