@@ -9,7 +9,7 @@ function Card({ title, imageUrl, links }) {
     width: '18rem',
     height: '18rem',
     color: 'white',
-    border: '1px solid #ccc',
+    border: '2px solid #5f80abff',
     borderRadius: '8px',
     display: 'flex',
     flexDirection: 'column',
