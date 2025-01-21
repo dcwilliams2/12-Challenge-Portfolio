@@ -57,6 +57,7 @@ The portfolio is deployed and accessible [Here](https://portfolio-danielcwilliam
 
 - Collaborators: 
     - [Daniel Williams](https://github.com/dcwilliams2)
+    - [ChatGPT](https://chatgpt.com)
 - Tutorials and Resources:
     - React Documentation: [https://reactjs.org/docs](https://reactjs.org/docs)
     - Bootstrap: [https://getbootstrap.com](https://getbootstrap.com)
